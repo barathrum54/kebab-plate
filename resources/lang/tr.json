@@ -1,0 +1,29 @@
+{
+    "common": {
+        "trashed": "Silinenler",
+        "with_trashed": "Silinenlerle birlikte",
+        "only_trashed": "Sadece Silinenler",
+        "create": "Olu\u015ftur",
+        "name": "\u0130sim",
+        "city": "\u015eehir",
+        "phone": "Telefon"
+    },
+    "layout": {
+        "my_profile": "Profilim",
+        "manage_users": "Kullan\u0131c\u0131lar\u0131 Y\u00f6net",
+        "settings": "Ayarlar",
+        "log_out": "\u00c7\u0131k\u0131\u015f Yap"
+    },
+    "menu": {
+        "dashboard": "Kontrol Paneli",
+        "organizations": "Kurumlar",
+        "contacts": "Ki\u015filer",
+        "reports": "Raporlar"
+    },
+    "organizations": {
+        "create_title": "Kurum Olu\u015ftur"
+    },
+    "settings": {
+        "language": "Dil"
+    }
+}

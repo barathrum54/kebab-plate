@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\OrganizationsController;
 use App\Http\Controllers\ReportsController;
+use App\Http\Controllers\SettingsController;
 use App\Http\Controllers\UsersController;
 use Illuminate\Support\Facades\Route;
 
@@ -140,3 +141,21 @@ Route::get('reports', [ReportsController::class, 'index'])
 Route::get('/img/{path}', [ImagesController::class, 'show'])
     ->where('path', '.*')
     ->name('image');
+
+// Settings
+
+Route::group(['prefix' => 'settings', 'middleware' => 'auth'], function () {
+    Route::get('/', [SettingsController::class, 'index'])
+        ->name('settings');
+    // Route::get('settings', [SettingsController::class, 'index'])
+    //     ->name('settings');
+
+    // Route::put('settings', [SettingsController::class, 'update'])
+    //     ->name('settings.update');
+});
+
+// Languages 
+Route::get('language/{language}', function ($language) {
+    Session()->put('locale', $language);
+    return redirect()->back();
+})->name('language');

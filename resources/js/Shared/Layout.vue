@@ -33,9 +33,10 @@
               </template>
               <template #dropdown>
                 <div class="mt-2 py-2 text-sm bg-white rounded shadow-xl">
-                  <Link class="block px-6 py-2 hover:text-white hover:bg-indigo-500" :href="`/users/${auth.user.id}/edit`">My Profile</Link>
-                  <Link class="block px-6 py-2 hover:text-white hover:bg-indigo-500" href="/users">Manage Users</Link>
-                  <Link class="block px-6 py-2 w-full text-left hover:text-white hover:bg-indigo-500" href="/logout" method="delete" as="button">Logout</Link>
+                  <Link class="block px-6 py-2 hover:text-white hover:bg-indigo-500" :href="`/users/${auth.user.id}/edit`">{{__('layout.my_profile')}}</Link>
+                  <Link class="block px-6 py-2 hover:text-white hover:bg-indigo-500" href="/users">{{__('layout.manage_users')}}</Link>
+                  <Link class="block px-6 py-2 hover:text-white hover:bg-indigo-500" href="/settings">{{__('layout.settings')}}</Link>
+                  <Link class="block px-6 py-2 w-full text-left hover:text-white hover:bg-indigo-500" href="/logout" method="delete" as="button">{{__('layout.log_out')}}</Link>
                 </div>
               </template>
             </dropdown>
